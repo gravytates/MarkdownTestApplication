@@ -3,6 +3,7 @@ package com.example.markdowntestapplication
 import android.content.Intent
 import android.os.Bundle
 import android.provider.AlarmClock.EXTRA_MESSAGE
+import android.util.Log
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.Menu
@@ -27,6 +28,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun sendMessage(view: View) {
+        Log.d("MyActivity", "aloha")
         val editText = findViewById<EditText>(R.id.editText)
         val message = editText.text.toString()
         val intent = Intent(this, DisplayMessageActivity::class.java).apply {
