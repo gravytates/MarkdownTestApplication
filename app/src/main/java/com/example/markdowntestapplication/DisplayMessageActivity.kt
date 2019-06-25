@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.AlarmClock.EXTRA_MESSAGE
 import android.widget.TextView
+import studio.untold.MarkdownTextView
 
 class DisplayMessageActivity : AppCompatActivity() {
 
@@ -13,8 +14,12 @@ class DisplayMessageActivity : AppCompatActivity() {
 
         val message = intent.getStringExtra(EXTRA_MESSAGE)
 
-        val textView = findViewById<TextView>(R.id.textView).apply {
-            text = message
-        }
+        val view = findViewById<MarkdownTextView>(R.id.markdowntextview)
+        view.setMarkdownText(message)
+//        view.setMarkdownTextAsy
+
+//        val textView = findViewById<TextView>(R.id.textView).apply {
+//            text = message
+//        }
     }
 }
