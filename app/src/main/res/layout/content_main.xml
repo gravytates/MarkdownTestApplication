@@ -11,7 +11,11 @@
     <EditText
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName"
+            android:gravity="top"
+            android:inputType="textCapSentences|textMultiLine"
+            android:minLines="3"
+            android:scrollHorizontally="false"
+            android:scrollbars="vertical"
             android:text="@string/edit_message"
             android:ems="10"
             android:id="@+id/editText" android:layout_marginTop="16dp"
